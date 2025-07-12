@@ -1,4 +1,4 @@
-IRB.conf[:PROMPT_MODE] = :SIMPLE
-IRB.conf[:OMIT_ON_ASSIGNMENT] = false
-IRB.conf[:INSPECT_MODE] = :inspect
 IRB.conf[:SAVE_HISTORY] = 10000
+
+# don't print arrays with each element on a new line
+IRB.conf[:INSPECT_MODE] = :inspect
