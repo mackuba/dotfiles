@@ -1,9 +1,14 @@
 #!/bin/bash
 
-for filename in `ls $HOME/Projects/dotfiles/*.txt`; do
+dir=$(dirname "$0")
+cd "$dir"
+
+path=$(pwd)
+
+for filename in `ls *.txt`; do
   name=`basename $filename .txt`
-  echo "Linking $HOME/Projects/dotfiles/$filename to $HOME/.$name..."
-  ln -s $@ $HOME/Projects/dotfiles/$filename $HOME/.$name
+  echo "Linking $path/$filename to $HOME/.$name..."
+  ln -s $@ "$path/$filename" "$HOME/.$name"
 done
 
 echo "Done."
