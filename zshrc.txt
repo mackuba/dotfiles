@@ -1,5 +1,11 @@
 . $HOME/.asdf/asdf.sh
 
+# MacPorts
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export MANPATH="/opt/local/share/man:$MANPATH"
+
+export EDITOR=nano
+
 alias be='bundle exec'
 
 unsetopt nomatch
