@@ -1,6 +1,12 @@
 [user]
-	email = jakub.suder@gmail.com
-	name = Kuba Suder
+name = Kuba Suder
+email = jakub.suder@gmail.com
+
+[init]
+defaultBranch = master
+
+[core]
+excludesfile = /Users/kuba/.gitignore_global
 
 [alias]
 mr = checkout master
@@ -8,30 +14,4 @@ st = status
 br = branch
 co = checkout
 cob = checkout -b
-sync = pull --rebase
 diffc = diff --cached
-rebcon = rebase --continue
-hub = "!git clone git@github.com:$1.git $2 #"
-undo = checkout HEAD
-
-[diff]
-algorithm = patience
-
-[fetch]
-prune = true
-
-[log]
-follow = true
-
-[merge]
-conflictStyle = diff3
-
-[pull]
-ff = only
-	rebase = true
-
-[rebase]
-missingCommitsCheck = error
-
-[stash]
-showPatch = true
