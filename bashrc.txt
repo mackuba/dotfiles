@@ -1,0 +1,11 @@
+# aliases
+alias be='bundle exec'
+
+# other settings
+export EDITOR="mate_wait"
+
+# fix for "!" on command line (http://mywiki.wooledge.org/BashPitfalls)
+set +H
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
