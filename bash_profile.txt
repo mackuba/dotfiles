@@ -1,11 +1,4 @@
-# paths
-export PATH="$PATH:~/Dropbox/Projects/skrypciki"
 
-# custom prompt with git branch info
-export PS1="\u@\h:\w\`ruby -e \"br = %x{git branch 2> /dev/null} ; print (br.split(/\n/).grep(/^\*/).first || '').gsub(/^\* (.+)$/, ' (\1)')\"\` > "
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-# load rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# include stuff from .bashrc
-[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"

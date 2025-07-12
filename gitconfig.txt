@@ -1,37 +1,26 @@
+# This is Git's per-user configuration file.
 [user]
-	email = jakub.suder@gmail.com
+# Please adapt and uncomment the following lines:
 	name = Kuba Suder
-
+	email = jakub.suder@gmail.com
+[init]
+	defaultBranch = master
 [alias]
-mr = checkout master
-st = status
-br = branch
-co = checkout
-cob = checkout -b
-sync = pull --rebase
-diffc = diff --cached
-rebcon = rebase --continue
-hub = "!git clone git@github.com:$1.git $2 #"
-undo = checkout HEAD
+        st = status
+        co = checkout
+        cob = checkout -b
+        mr = checkout master
 
-[diff]
-algorithm = patience
-
-[fetch]
-prune = true
-
-[log]
-follow = true
-
-[merge]
-conflictStyle = diff3
-
-[pull]
-ff = only
-	rebase = true
-
-[rebase]
-missingCommitsCheck = error
-
-[stash]
-showPatch = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesfile = /Users/kuba/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
